@@ -21,7 +21,7 @@
 <script setup lang="ts">
 import { UnwrapNestedRefs } from "vue";
 import { Toasteo } from "../toasteo";
-const props = defineProps<{
+defineProps<{
   toasteo: UnwrapNestedRefs<Toasteo>;
 }>();
 </script>

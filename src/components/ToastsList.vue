@@ -15,11 +15,8 @@
 
 <script setup lang="ts">
 import { UnwrapNestedRefs } from "vue";
-import { useToasteo } from "../composables";
 import { Toasteo } from "../toasteo";
 defineProps<{
   toasteo: UnwrapNestedRefs<Toasteo>;
 }>();
-
-const toasteo = useToasteo();
 </script>

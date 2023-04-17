@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div>{{ name }} is component props name</div>
     <div>
       Toasteo container is named "{{ toasteo.name }}" and contains
       {{ toasteo.toasts.length }} toasts
@@ -15,9 +14,11 @@
 </template>
 
 <script setup lang="ts">
+import { UnwrapNestedRefs } from "vue";
 import { useToasteo } from "../composables";
+import { Toasteo } from "../toasteo";
 defineProps<{
-  name: string;
+  toasteo: UnwrapNestedRefs<Toasteo>;
 }>();
 
 const toasteo = useToasteo();

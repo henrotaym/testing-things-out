@@ -17,8 +17,9 @@ class Toasteo {
 
   public deleteToast(uuid: string) {
     const index = this._toasts.findIndex((toast) => toast.uuid === uuid);
-    if (index === -1) return;
+    if (index === -1) return console.log("not found");
     this._toasts.splice(index, 1);
+    console.log("toast deleted");
   }
 
   public get toasts() {
